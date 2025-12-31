@@ -270,53 +270,31 @@
 
     <!-- Contenedor Principal de la App --><div id="app-container">
 
-<section id="login-section" class="min-h-screen flex bg-white font-sans overflow-hidden">
-    
-    <div class="hidden lg:flex lg:w-1/2 relative bg-white items-center justify-center overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-[#7EE3EF] transform rotate-45 translate-x-16 -translate-y-48"></div>
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#7EE3EF] transform rotate-45 -translate-x-32 translate-y-32"></div>
-
-        <div class="relative z-10 w-full px-20">
-            <img src="https://sisplay.co/wp-content/uploads/2025/10/Gemini_Generated_Image_pgvmjcpgvmjcpgvm-removebg-preview1.png" 
-                 alt="Lavao Platform" 
-                 class="w-full h-auto max-w-xl mx-auto">
+        
+        <!-- Contenedor del Login (Visible por defecto) --><div id="login-section" class="min-h-screen flex items-center justify-center p-4 bg-light-gray">
+             <div class="w-full" style="max-width: 24.5rem;">
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden p-8">
+                    <div class="text-center -my-16 relative z-0">
+                        <img class="mx-auto h-80 w-auto" src="https://sisplay.co/wp-content/uploads/2025/10/Gemini_Generated_Image_pgvmjcpgvmjcpgvm-removebg-preview1.png" alt="LavaoPro Logo" style="filter: drop-shadow(0 3px 5px rgba(255, 255, 255, 0.5));">
+                    </div>
+                    <div class="mt-10 relative z-10">
+                        <form id="login-form" class="space-y-6">
+                            <div>
+                                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-lg border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand sm:text-sm sm:leading-6 transition duration-300 bg-input-gray" placeholder="Correo electrónico">
+                            </div>
+                            <div>
+                                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-lg border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand sm:text-sm sm:leading-6 transition duration-300 bg-input-gray" placeholder="Contraseña">
+                            </div>
+                            <p id="error-message" class="hidden text-center text-sm text-red-600">Correo o contraseña incorrectos.</p>
+                            <p id="fetch-error-message" class="hidden text-center text-sm text-red-600">No se pudieron cargar los datos. Inténtalo de nuevo.</p>
+                            <div>
+                                <button type="submit" class="flex w-full justify-center rounded-lg bg-brand px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand transition duration-300 transform hover:scale-105">Iniciar Sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="w-full lg:w-1/2 flex items-center justify-center p-8 sm:p-12 bg-white">
-        <div class="w-full max-w-sm">
-            <h1 class="text-6xl font-bold text-[#555555] mb-10 tracking-tight">login</h1>
-
-            <form id="login-form" class="space-y-5">
-                <div class="relative">
-                    <input id="email" name="email" type="email" autocomplete="email" required 
-                           class="block w-full rounded-2xl border border-gray-200 py-4 px-5 text-gray-700 placeholder:text-gray-300 focus:ring-2 focus:ring-[#00CFE8] focus:border-transparent transition duration-300 outline-none" 
-                           placeholder="Correo">
-                </div>
-
-                <div class="relative">
-                    <input id="password" name="password" type="password" autocomplete="current-password" required 
-                           class="block w-full rounded-2xl border border-gray-200 py-4 px-5 text-gray-700 placeholder:text-gray-300 focus:ring-2 focus:ring-[#00CFE8] focus:border-transparent transition duration-300 outline-none" 
-                           placeholder="Contraseña">
-                </div>
-
-                <p id="error-message" class="hidden text-center text-sm text-red-500 font-medium italic">Correo o contraseña incorrectos.</p>
-                <p id="fetch-error-message" class="hidden text-center text-sm text-red-500 font-medium italic">No se pudieron cargar los datos.</p>
-
-                <div class="pt-4">
-                    <button type="submit" 
-                            class="w-full bg-[#00CFE8] text-white py-4 rounded-xl text-lg font-semibold shadow-md hover:bg-[#00b8ce] transition duration-300 transform active:scale-95">
-                        Iniciar sesión
-                    </button>
-                </div>
-
-                <div class="text-center pt-6">
-                    <span class="text-gray-300 text-sm">By Wipti</span>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
 
         <!-- ***** PANELES DE LA APLICACIÓN ***** --><!-- Panel del Administrador (Oculto por defecto) --><div id="admin-dashboard" class="hidden min-h-screen bg-light-gray">
             <header class="bg-white shadow-sm p-4 flex justify-between items-center sticky top-0 z-20">
@@ -2140,6 +2118,7 @@
 // --- FIN DEL CÓDIGO DE REEMPLAZO (FUNCIONES DE GALERÍA V2) ---  </script>
 </body>
 </html>
+
 
 
 
